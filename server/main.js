@@ -16,8 +16,10 @@ Meteor.startup(function () {
 //this is the publication of the collection of chats
 Meteor.publish("chats", function(){
 
-    return Chats.find();
-
+    return Chats.find({$or:[
+                {user1Id:this.userId}, 
+                {user2Id:this.userId}
+                ]});
   });
 
 Meteor.publish("users", function(){

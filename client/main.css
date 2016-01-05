@@ -1,9 +1,13 @@
 /* CSS declarations go here */
 
 .user_avatar{
-	min-height:100px;
+	min-height:35px;
 	text-align: center;
 }
 .avatar_img{
 	height:75px;
+}
+.css-creator-image{
+	height: 35px;
+	width: 35px;
 }
