@@ -12,3 +12,16 @@ Meteor.startup(function () {
       }
     } 
   });
+
+//this is the publication of the collection of chats
+Meteor.publish("chats", function(){
+
+    return Chats.find();
+
+  });
+
+Meteor.publish("users", function(){
+
+    return Meteor.users.find();
+
+  });

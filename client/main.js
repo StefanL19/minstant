@@ -1,3 +1,9 @@
+
+//this is the subscription for the chats collection
+
+  Meteor.subscribe('chats');
+  Meteor.subscribe('users');
+
  ///
   // helper functions 
   /// 
@@ -69,7 +75,7 @@
       // put the messages array onto the chat object
       chat.messages = msgs;
       // update the chat object in the database.
-      Chats.update(chat._id, chat);
+      Meteor.call("addMessage", chat);
     }
   }
  })
