@@ -1,0 +1,1 @@
+This is a simple instant message application developed for the Coursera University Of London Meteor Course.
