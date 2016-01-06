@@ -76,6 +76,14 @@
       chat.messages = msgs;
       // update the chat object in the database.
       Meteor.call("addMessage", chat);
+      setTimeout(function(){ $('.msg').emoticonize() }, 500);
     }
+  },//this is the end of the submit form event
+
+  'click .emot':function(event){
+    $('.msg').emoticonize(function(err,res){
+        return res;
+      });
   }
+
  })
